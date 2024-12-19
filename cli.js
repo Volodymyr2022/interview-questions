@@ -5,11 +5,14 @@ const interviewQuestion = require('./index.js');
 const getThemArgs = require('get-them-args');
 
 const args = getThemArgs(process.argv.slice(2));
+console.log(args);
 const verbose = args.verbose || false;
 const filter = args.top ? 'top' : args.filter || 'all';
 const amount = args.top || '';
 const level = args.level || '';
 const format = args.format || 'text';
+const params = args.params || '';
+
 
 const logHeader = (header) => console.log('\x1b[32m%s\x1b[0m', header);
 const logDivider = () => console.log('_________________________');
@@ -46,7 +49,7 @@ const main = async () => {
     if (filter) console.log('Filter -', filter);
     console.log('');
 
-    const result = await interviewQuestion({ filter, amount, level, format });
+    const result = await interviewQuestion({ filter, amount, level, format, params });
     displayQuestions(result, format);
 
     console.log('');

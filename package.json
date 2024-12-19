@@ -3,7 +3,8 @@
   "version": "1.2.0",
   "main": "index.js",
   "scripts": {
-    "test": "npx jest ./test/InterviewQuestion.test.js"
+    "test": "npx jest ./test/InterviewQuestion.test.js",
+    "learn": "node cli.js --params function"
   },
   "repository": {
     "type": "git",
