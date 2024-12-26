@@ -51,8 +51,8 @@ class InterviewQuestion {
 
     if (params) {
       
-      console.log('test params', params)
-      filteredData = filteredData.filter(item => item.thema === params);
+      console.log('test paramss', params)
+      filteredData = filteredData.filter(item => item.thema.split(',').includes(params));
     }
 
     switch (filter) {
